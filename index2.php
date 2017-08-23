@@ -136,8 +136,8 @@ if (empty($_GET['refresh'])) {
 			<a href="<?php echo $git_url; ?>">Source</a> |
 			<a href="<?php echo $git_url; ?>/blob/master/LICENSE">License</a>
 		</div>
-		<div id="copyleft">Copyleft &copy; <a href="<?php echo $git_url; ?>"><?php echo $author_project.' '.$author_version;?></a><br />
-			Powered by <a href="http://www.php.net/">PHP </a><?php echo $author_name.' Development'; ?></a>
+		<div id="copyleft"><a href="<?php echo $git_url; ?>"><?php echo $author_project.' '.$author_version;?></a><br />
+			Powered by <a href="http://www.php.net/">PHP </a><?php echo $author_name.;?></a>
 		</div>
 	</div> <!-- End Footer -->
 
