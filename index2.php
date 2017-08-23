@@ -108,7 +108,7 @@ if (empty($_GET['refresh'])) {
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-8">
-				<h2>EC2 Metadata</h2>
+				<h3>EC2 Metadata</h3>
 				<?php
 			    //metadata table
 			    echo '<table border="0" bgcolor="#ffffff" cellpadding="5" cellspacing="0" width="100%">';
@@ -123,11 +123,11 @@ if (empty($_GET['refresh'])) {
 		    	?>
 			</div>
 			<div class="col-md-4 bg-light">
-				<h2>AWS  - Region</h2>
+				<h3>AWS  - Region</h3>
 				<p><?php echo findRegion($meta_data['availability-zone']); ?></p><br>
-				<h3>Availability Zone</h3>
+				<h4>Availability Zone</h4>
 				<p><?php echo findAZ($meta_data['availability-zone']); ?></p><br>
-				<h3>Information</h3>
+				<h4>Information</h4>
 				<p>Server: <?php echo $server_software.'<br>Public IP: ';?><a href="http://<?php echo $server_ip; ?>"><?php echo $server_ip; ?></a></p>
 				<p>Client: <?php echo $client_agent.'<br>IP: '.$client_ip; ?></p>
 			</div>
