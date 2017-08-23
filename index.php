@@ -93,14 +93,14 @@ if (empty($_GET['refresh'])) {
 
 				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
 					<div class="btn-group mr-2" role="group" aria-label="Label group">
-						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=0';">Refresh</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='<?php echo $php_self.'?refresh=0'; ?>';">Refresh</button>
 					</div>
 					<div class="btn-group btn-group-sm" role="group" aria-label="Refresh Period">
-						<button type="button" class="btn btn-secondary" onclick="<?php echo $php_self.'?refresh=2'; ?>;">2s</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=5';">5s</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=30';">30s</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=60';">1m</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=300';">5m</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='<?php echo $php_self.'?refresh=2'; ?>';">2s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='<?php echo $php_self.'?refresh=5'; ?>';">5s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='<?php echo $php_self.'?refresh=30'; ?>';">30s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='<?php echo $php_self.'?refresh=60'; ?>';">1m</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='<?php echo $php_self.'?refresh=300'; ?>';">5m</button>
 					</div>
 				</div>
 			</div>
@@ -148,7 +148,7 @@ if (empty($_GET['refresh'])) {
 				<a href="<?php echo $git_url; ?>/blob/master/LICENSE">License</a>
 			</div>
 			<div id="copyleft"><a href="<?php echo $git_url; ?>"><?php echo $author_project.' '.$author_version;?></a><br />
-				Powered by <a href="http://www.php.net/">PHP </a><?php echo $author_name.; ?></a>
+				Powered by <a href="http://www.php.net/">PHP </a><?php echo $author_name.''; ?></a>
 			</div>
 		</span>
       </div>
