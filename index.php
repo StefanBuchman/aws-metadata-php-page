@@ -5,9 +5,8 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 // Credit
-$author_name = 'AlphaMusk';
-$author_version = 'v1.3';
-$author_email = 'alphamusk@networkpulse.com';
+$author_name = 'StefanBuchman';
+$author_version = 'v1.0';
 $author_project = 'AWS Metadata PHP Page';
 
 // Dont use dashes - in declaring variables, break them, no idea.
@@ -135,7 +134,6 @@ if (empty($_GET['refresh'])) {
 		<div id="altnav">
 			<a href="<?php echo $git_url; ?>/blob/master/README.md">Readme</a> | 
 			<a href="<?php echo $git_url; ?>">Source</a> | 
-			<a href="mailto:<?php echo $author_email; ?>?subject=<?php echo $author_project;?>">Contact</a> | 
 			<a href="<?php echo $git_url; ?>/blob/master/LICENSE">License</a>
 		</div>
 		<div id="copyleft">Copyleft &copy; <a href="<?php echo $git_url; ?>"><?php echo $author_project.' '.$author_version;?></a><br />
