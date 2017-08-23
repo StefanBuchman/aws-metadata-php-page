@@ -2,7 +2,7 @@
 Queries metadata address on AWS EC2 instances to help see what machine you hit behind an Elastic Load Balancer (ELB)
 
 ### Demo Screenshot ###
-![Demo screenshot of page](http://www.alphamusk.com/img/demo_aws_metadata.jpg)
+![Demo screenshot of page](https://www.dropbox.com/s/zpgd17lzhb0kshn/aws-metadata-php-page.JPG?dl=0)
 
 ### Install required applications
     apt-get install -y apache2 php5 awscli git
