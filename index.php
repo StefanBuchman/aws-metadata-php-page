@@ -21,7 +21,7 @@ $meta_data['public-hostname'] = $public_hostname = exec($curl_cmd." http://".$me
 $meta_data['public-ipv4'] = $public_ipv4 = exec($curl_cmd." http://".$meta_host."/latest/meta-data/public-ipv4/");
 $meta_data['local-hostname'] = $local_hostname = exec($curl_cmd." http://".$meta_host."/latest/meta-data/local-hostname/");
 $meta_data['local-ipv4'] = $local_ipv4 = exec($curl_cmd." http://".$meta_host."/latest/meta-data/local-ipv4/");
-$git_url = 'https://github.com/alphamusk/aws-metadata-php-page';
+$git_url = 'https://github.com/StefanBuchman/aws-metadata-php-page';
 $S3_url = "https://s3-us-west-1.amazonaws.com/networkpulse/com/public/images";
 $S3_image = "$S3_url.aws.png";
 $server_name = $_SERVER['SERVER_NAME'];
@@ -46,9 +46,9 @@ if (empty($_GET['refresh'])) {
 	return 'Error: unknown az';
 	}
 	$az = strtolower($az);
-	return $az;		
+	return $az;
  } //end function
- 
+
  /** find the region **/
  function findRegion ($region) {
  	// check if the value is null/empty
@@ -59,7 +59,7 @@ if (empty($_GET['refresh'])) {
 	$region = strtoupper($region);
 	return $region;
  } //end function
- 
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -69,15 +69,15 @@ if (empty($_GET['refresh'])) {
 	<title><?php echo $author_project.' '.$author_version; ?></title>
 	<meta http-equiv="refresh" content="<?php echo $page_refresh; ?>" />
 	<meta http-equiv="Content-Language" content="en-us" />
-	
+
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="MSSmartTagsPreventParsing" content="true" />
-	
+
 	<meta name="description" content="Description" />
 	<meta name="keywords" content="Keywords" />
-	
+
 	<meta name="author" content="<?php echo $author_name; ?>" />
-	
+
 	<style type="text/css" media="all">@import "css/master.css";</style>
 </head>
 
@@ -111,7 +111,7 @@ if (empty($_GET['refresh'])) {
 			<p>Client: <?php echo $client_agent.'<br>IP: '.$client_ip; ?></p>
 		</div>
 	</div> <!-- End sidebar-a -->
-	
+
 	<div id="content">
 		<div class="padding">
 			<h2>EC2 Metadata</h2>
@@ -129,15 +129,15 @@ if (empty($_GET['refresh'])) {
 		    	?>
 		</div>
 	</div> <!-- End Content -->
-	
+
 	<div id="footer">
 		<div id="altnav">
-			<a href="<?php echo $git_url; ?>/blob/master/README.md">Readme</a> | 
-			<a href="<?php echo $git_url; ?>">Source</a> | 
+			<a href="<?php echo $git_url; ?>/blob/master/README.md">Readme</a> |
+			<a href="<?php echo $git_url; ?>">Source</a> |
 			<a href="<?php echo $git_url; ?>/blob/master/LICENSE">License</a>
 		</div>
 		<div id="copyleft">Copyleft &copy; <a href="<?php echo $git_url; ?>"><?php echo $author_project.' '.$author_version;?></a><br />
-			Powered by <a href="http://www.php.net/">PHP5</a> and <a href="mailto:<?php echo $author_email;?>?subject=<?php echo $author_project;?>"><?php echo $author_name.' Development'; ?></a>
+			Powered by <a href="http://www.php.net/">PHP5</a><?php echo $author_name.' Development'; ?></a>
 		</div>
 	</div> <!-- End Footer -->
 
