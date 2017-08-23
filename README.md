@@ -16,8 +16,11 @@ Queries metadata address on AWS EC2 instances to help see what machine you hit b
     cd /var/www/html
     git clone http://github.com/StefanBuchman/aws-metadata-php-page .
 
+### AWS Launch Configuration Base64
+    IyEvYmluL3NoDQoNCnl1bSAteSBpbnN0YWxsIGh0dHBkIHBocCBnaXQNCmNoa2NvbmZpZyBodHRwZCBvbg0KL2V0Yy9pbml0LmQvaHR0cGQgc3RhcnQNCmNkIC92YXIvd3d3L2h0bWwNCmdpdCBjbG9uZSBodHRwOi8vZ2l0aHViLmNvbS9TdGVmYW5CdWNobWFuL2F3cy1tZXRhZGF0YS1waHAtcGFnZSAu
+
 ### GIT code onto Linux instance
-    cd /var/www/html && git clone http://github.com/StefanBuchman/aws-metadata-php-page 
+    cd /var/www/html && git clone http://github.com/StefanBuchman/aws-metadata-php-page
 
 ### Cron job to git source every 30 mins
     ##### m h  dom mon dow   command
