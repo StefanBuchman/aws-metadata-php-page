@@ -27,3 +27,6 @@ Queries metadata address on AWS EC2 instances to help see what machine you hit b
     job="*/30 * * * *  cd /var/www/html && git pull http://github.com/StefanBuchman/aws-metadata-php-page.git > /dev/null 2>&1"
     (crontab -u ${USER} -l; echo "${job}" ) | crontab -u ${USER} -
     crontab -l
+
+### Cron job from script
+    (crontab -l 2>/dev/null; echo "*/5 * * * *  cd /var/www/html && git pull http://github.com/StefanBuchman/aws-metadata-php-page.git > /dev/null 2>&1") | crontab -
