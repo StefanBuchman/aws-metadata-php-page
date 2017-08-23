@@ -85,44 +85,48 @@ if (empty($_GET['refresh'])) {
 	<style type="text/css" media="all">@import "css/styles.css";</style>
 </head>
 <body>
-	<div class="jumbotron jumbotron-fluid">
- 		<div class="container">
- 			<h1 class="display-3">Amazon Web Services</h1>
-			<hr class="my-4">
+	<div class="container-fluid d-flex h-100 flex-column" id="main">
+		<div class="jumbotron" style="margin-bottom: 0px;">
+			<div class="container">
+				<h1 class="display-3">Amazon Web Services</h1>
+				<hr class="my-4">
 
- 			<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-				<div class="btn-group mr-2" role="group" aria-label="Label group">
-					<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=0';">Refresh</button>
-				</div>
-				<div class="btn-group btn-group-sm" role="group" aria-label="Refresh Period">
-					<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=2';">2s</button>
-					<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=5';">5s</button>
-					<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=30';">30s</button>
-					<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=60';">1m</button>
-					<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=300';">5m</button>
+				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+					<div class="btn-group mr-2" role="group" aria-label="Label group">
+						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=0';">Refresh</button>
+					</div>
+					<div class="btn-group btn-group-sm" role="group" aria-label="Refresh Period">
+						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=2';">2s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=5';">5s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=30';">30s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=60';">1m</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=300';">5m</button>
+					</div>
 				</div>
 			</div>
- 		</div>
-	</div>
+		</div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-8">
+		<div class="row fill d-flex justify-content-start">
+			<div class="col-md-8 portlet-container portlet-dropzone" style="padding-top: 20px;">
 				<h3>EC2 Metadata</h3>
 				<?php
 			    //metadata table
-			    echo '<table border="0" bgcolor="#ffffff" cellpadding="5" cellspacing="0" width="100%">';
-			    echo '<tr><th align="left">Metadata</th><th align="left">Value</th></tr>';
+				echo '<table class="table table-hover">';
+				echo '<thead class="thead-inverse">';
+				echo '<tr><th align="left">Metadata</th><th align="left">Value</th></tr>';
+				echo '<tbody>';
 			    foreach($meta_data as $x=>$x_value) {
 			       echo '<tr>';
 			    	echo '<td nowrap><span class="key">'. $x . '</span></td>';
 			            echo '<td no wrap><span class="value">'. $x_value . '</span></td>';
 			       echo '</tr>';
-			    }
+				}
+				echo '</tbody>';
 			    echo '</table>';
 		    	?>
 			</div>
-			<div class="col-md-4 bg-light">
+			
+			<div class="col-md-4 portlet-container portlet-dropzone" style="padding-top: 20px;" id="sidebar">
 				<h3>AWS  - Region</h3>
 				<p><?php echo findRegion($meta_data['availability-zone']); ?></p><br>
 				<h4>Availability Zone</h4>
@@ -133,6 +137,22 @@ if (empty($_GET['refresh'])) {
 			</div>
 		</div>
 	</div>
+	
+
+	<footer class="footer" id="footer">
+      <div class="container">
+        <span class="text-muted">
+			<div id="altnav">
+				<a href="<?php echo $git_url; ?>/blob/master/README.md">Readme</a> |
+				<a href="<?php echo $git_url; ?>">Source</a> |
+				<a href="<?php echo $git_url; ?>/blob/master/LICENSE">License</a>
+			</div>
+			<div id="copyleft">Copyleft &copy; <a href="<?php echo $git_url; ?>"><?php echo $author_project.' '.$author_version;?></a><br />
+				Powered by <a href="http://www.php.net/">PHP </a><?php echo $author_name.' Development'; ?></a>
+			</div>
+		</span>
+      </div>
+    </footer>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

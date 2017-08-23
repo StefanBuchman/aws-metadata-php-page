@@ -4,6 +4,77 @@ Blue: #146EB4
 Orange: #ff9900
 */
 
+/*
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 60px;
+  }*/
+ 
+  html,body{
+    height:100%;
+}
+
+.fill {
+  flex:1;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#main {
+  margin-bottom: 0px; 
+  padding-left: 0px; 
+  padding-right: 0px;
+}
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #e9ecef;
+  }
+
 h1 {
     color: #ff9900;
+}
+
+#footer {
+	clear: both;
+	font-size: 11px;
+	color: #f1f1f1;
+	border-top: 1px solid #efefef;
+	padding: 13px;
+	line-height: 18px;
+}
+
+#footer #altnav {
+	width: 350px;
+	float: right;
+	text-align: right;
+	padding-top: 13px;
+}
+
+#footer #copyleft {
+	padding-top: 0px;
+}
+
+#footer a {
+	color: #685F5F;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #ff9900;
+}
+
+#sidebar {
+  background-color: #e9ecef;
 }
