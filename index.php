@@ -96,11 +96,11 @@ if (empty($_GET['refresh'])) {
 						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=0';">Refresh</button>
 					</div>
 					<div class="btn-group btn-group-sm" role="group" aria-label="Refresh Period">
-						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=2';">2s</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=5';">5s</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=30';">30s</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=60';">1m</button>
-						<button type="button" class="btn btn-secondary" onclick="location.href='index2.php?refresh=300';">5m</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=2';">2s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=5';">5s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=30';">30s</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=60';">1m</button>
+						<button type="button" class="btn btn-secondary" onclick="location.href='index.php?refresh=300';">5m</button>
 					</div>
 				</div>
 			</div>
